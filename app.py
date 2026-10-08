@@ -15,7 +15,7 @@ import like_count_pb2
 app = Flask(__name__)
 
 # ---------- CONFIG ----------
-TOTAL_VISITS = 2000          # Fixed total visits
+TOTAL_VISITS = 10000          # Fixed total visits
 CONCURRENT_LIMIT = 50        # Max concurrent requests (avoid overload)
 # ----------------------------
 
@@ -186,7 +186,7 @@ HTML_PAGE = """
 <body>
   <div class="card">
     <div class="logo">FF VISIT TOOL</div>
-    <div class="sub">Powered by AyushXSarkar • 2000 Visits Fixed</div>
+    <div class="sub">Powered by AyushXSarkar • 10k Visits Fixed</div>
 
     <label for="uid">Player UID</label>
     <input id="uid" type="text" placeholder="Enter target UID" autocomplete="off">
@@ -201,7 +201,7 @@ HTML_PAGE = """
       <option value="BD">BD — Bangladesh</option>
     </select>
 
-    <button id="btn" onclick="sendVisit()">🚀 Send 2000 Visits</button>
+    <button id="btn" onclick="sendVisit()">🚀 Send 10k Visits</button>
 
     <div class="result" id="result"></div>
 
@@ -218,7 +218,7 @@ async function sendVisit() {
   if (!uid) { alert('Please enter UID'); return; }
 
   btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span> Sending 2000 visits...';
+  btn.innerHTML = '<span class="spinner"></span> Sending 10k visits...';
   result.classList.remove('show');
   result.innerHTML = '';
 
@@ -244,7 +244,7 @@ async function sendVisit() {
     result.innerHTML = `<div class="row"><span>Error</span><span class="bad">${e.message}</span></div>`;
   } finally {
     btn.disabled = false;
-    btn.innerHTML = '🚀 Send 2000 Visits';
+    btn.innerHTML = '🚀 Send 10k Visits';
   }
 }
 </script>

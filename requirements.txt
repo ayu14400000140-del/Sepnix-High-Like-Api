@@ -1,8 +1,7 @@
-Flask
-flask-cors
+Flask[async]
 requests
 aiohttp
-urllib3
+googleapis-common-protos
 pycryptodome
 protobuf
-orjson
+Werkzeug

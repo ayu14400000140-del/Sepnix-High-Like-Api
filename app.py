@@ -15,7 +15,7 @@ import like_count_pb2
 app = Flask(__name__)
 
 # ---------- CONFIG ----------
-TOTAL_VISITS = 10050          # Fixed total visits
+TOTAL_VISITS = 5050          # Fixed total visits
 CONCURRENT_LIMIT = 50        # Max concurrent requests (avoid overload)
 # ----------------------------
 
